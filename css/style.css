@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  /* Primary clr*/
+  --clr-primary-profile: hsl(246, 80%, 60%);
+  --clr-primary-work: hsl(15, 100%, 70%);
+  --clr-primary-play: hsl(195, 74%, 62%);
+  --clr-primary-study: hsl(348, 100%, 68%);
+  --clr-primary-exercise: hsl(145, 58%, 55%);
+  --clr-primary-social: hsl(264, 64%, 52%);
+  --clr-primary-selfcare: hsl(43, 84%, 65%);
+
+  /* NEUTRAL CLR */
+
+  --clr-neutral-Verydarkblue: hsl(226, 43%, 10%);
+  --clr-neutral-Darkblue: hsl(235, 46%, 20%);
+  --clr-neutral-Desaturatedblue: hsl(235, 45%, 61%);
+  --clr-neutral-PaleBlue: hsl(236, 100%, 87%);
+
+  /* FONT FAMILY */
+  --ff-main: "Rubik", sans-serif;
+
+  /* FONT WEIGHT */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+
+  /* FONT SIZE */
+  --fs-main: 1.125rem;
+  --fs-200: 1.5rem;
+}
+
+body {
+  background: var(--clr-neutral-Verydarkblue);
+  font-family: var(--ff-main);
+  min-height: 100vh;
+  min-height: 100svh;
+}
+img {
+  display: block;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  padding: 20px;
+  max-width: 600px;
+  width: 90vw;
+  gap: 20px;
+  display: grid;
+}
+.profile {
+  background: var(--clr-neutral-Darkblue);
+  border-radius: 20px;
+}
+.profile__info {
+  background: var(--clr-primary-profile);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 20px;
+}
+.profile__picture {
+  border: 2px solid #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.profile__name {
+  font-weight: 300;
+  font-size: var(--fs-200);
+}
+.profile__name > span {
+  color: #ffffff69;
+  font-size: 16px;
+}
+
+.profile_reports {
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--clr-neutral-Darkblue);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #ffffff79;
+  font-size: 1.25rem;
+}
+.btn.active {
+  color: #fff;
+}
+
+/* CARDS COLORS */
+.card.Work {
+  background: var(--clr-primary-work);
+}
+.card.Play {
+  background: var(--clr-primary-play);
+}
+.card.Study {
+  background: var(--clr-primary-study);
+}
+
+.card.Exercise {
+  background: var(--clr-primary-exercise);
+}
+.card.Social {
+  background: var(--clr-primary-social);
+}
+
+.card.SelfCare {
+  background: var(--clr-primary-selfcare);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.card .header {
+  position: relative;
+  overflow: hidden;
+  border-radius: 200px;
+  padding: 20px;
+}
+.card .header img {
+  position: absolute;
+  top: -30%;
+  right: 5%;
+}
+
+.card .card__info {
+  background: var(--clr-neutral-Darkblue);
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+}
+
+.card__info_top,
+.card__info_bottom {
+  display: flex;
+  align-items: center;
+}
+.card__info_bottom {
+  margin-top: -3rem;
+}
+.card__dots,
+.card__previous {
+  margin-left: auto;
+  font-weight: var(--fw-300);
+}
+.card__title {
+  font-weight: var(--fw-300);
+}
+.card__hours {
+  font-size: 30px;
+  font-weight: var(--fw-300);
+}
+
+@media (min-width: 1768px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+  .container {
+    max-width: 1200px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .profile__info {
+    flex-direction: column;
+    align-items: self-start;
+    padding: 50px;
+  }
+  .profile_reports {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card__content {
+    outline: 1px solid red;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card__info_top,
+  .card__info_bottom {
+    width: 375px;
+  }
+  .card__info_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+  }
+}
