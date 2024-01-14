@@ -127,10 +127,13 @@ img {
     opacity: 1;
   }
 }
-
+.card__content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .card {
   border-radius: 18px;
-  margin-bottom: 20px;
 }
 
 .card .header {
@@ -175,45 +178,74 @@ img {
   font-weight: var(--fw-300);
 }
 
-@media (min-width: 1768px) {
+@media (min-width: 78.125rem) {
   body {
     display: grid;
     place-content: center;
   }
-  .container {
-    max-width: 1200px;
-  }
   .wrapper {
+    max-width: 1200px;
     display: flex;
     justify-content: center;
+
   }
   .profile__info {
     flex-direction: column;
     align-items: self-start;
-    padding: 50px;
+    padding: 1.5rem;
+
   }
   .profile_reports {
+    align-items: start;
     flex-direction: column;
+    padding: 1.5rem;
     gap: 30px;
   }
-
+  .profile__name{
+    font-size: 2.5rem;
+    margin-top: -1.5rem;
+  }
+  .profile__picture{
+    width: 100px;
+    height: 100px;
+   
+  }
+  .card__info:hover{
+    cursor: pointer;
+    background: var(--clr-neutral-Desaturatedblue);
+  }
   .card__content {
-    outline: 1px solid red;
-    max-width: 900px;
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
+    max-width: 950px;
   }
 
+  .card__title{
+    font-size: 1.5rem;
+  }
+  .card__hours{
+    font-size: 3.5rem;
+    margin-right: auto;
+  }
   .card__info_top,
   .card__info_bottom {
-    width: 375px;
+    width: 250px;
+
   }
+
+.card__previous {
+  margin-left: 0;
+  margin-right: auto;
+  font-size: 1rem;
+  margin-top: -4rem;
+}
+
   .card__info_bottom {
     display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
+    flex-direction: column;
+    margin-top: -5rem;
   }
 }
