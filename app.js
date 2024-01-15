@@ -35,7 +35,7 @@ const createCard = (data, times) => {
 
   cardContent.innerHTML = `
     <header class="header">
-      <img src="./images/icon-${data}.svg" alt="" />
+      <img src="/images/icon-${data}.svg" alt="" />
     </header>
     <div class="card__info">
       <div class="card__info_top">
