@@ -41,7 +41,7 @@ const createCard = (data, times) => {
         <h4 class="card__title">${data}</h4>
         <h5 class="card__dots">. . .</h5>
       </div>
-      <div class="card__info_bottom" id="currentValue">
+      <div class="card__info_bottom">
         <h4 class="card__hours">${current}hrs</h4>
         <h5 class="card__previous">Last Week - ${previous}hrs</h5>
       </div>     
